@@ -21,6 +21,8 @@
       <span>{{t "Search"}}</span>
     </a>
   </li>
+  <!-- Subscription mechanism for paid subscription -->
+  <!--
   {{#if @labs.members}}
     {{#if @member}}
       <li class="nav-account">
@@ -40,4 +42,14 @@
       </li>
     {{/if}}
   {{/if}}
+  -->
+
+  <!-- Subscription mechanism for simple email newsletter -->
+  {{#if @labs.members}}
+    <li class="nav-subscribe">
+      <button class="members-subscribe cta" onclick="location.href='/subscribe';">{{t "Join Newsletter"}}</button>
+    </li>
+  {{/if}}
+
+
 </ul>

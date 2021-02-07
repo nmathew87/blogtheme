@@ -13,7 +13,8 @@
 
 	{{!-- Styles'n'Scripts --}}
 	<link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}" />
-
+	<link rel="stylesheet" type="text/css" href="{{asset "css/subformstyle.css"}}" />
+	
 	<script>
 			var siteUrl = '{{@site.url}}';
 	</script>
@@ -77,7 +78,7 @@
 				{{#if @site.secondary_navigation}}
 				{{navigation type="secondary"}}
 				{{/if}}
-				<span class="nav-credits">{{t "Published with"}} <a href="https://ghost.org">Ghost</a> &bull; {{t "Theme" }} <a href="https://github.com/zutrinken/attila">Attila</a></span>
+				<span class="nav-credits">{{t "Published with"}} <a href="https://ghost.org">Ghost</a> &bull; {{t "Theme forked from" }} <a href="https://github.com/zutrinken/attila">Attila</a></span>
 			</nav>
 		</div>
 

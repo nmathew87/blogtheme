@@ -1,0 +1,41 @@
+{{!< default}}
+
+{{!-- Everything inside the #post tags pulls data from the post --}}
+
+<header class="post-header">
+	<div class="inner">
+		<h1 class="post-title" style="margin-bottom: 0em;">Subscribe</h1>
+	</div>
+    
+</header>
+
+<main class="content" role="main">
+    <div class="inner">
+        <section class="{{post_class}} post-content">
+            <p>
+                You can subscribe via email to get an update everytime I post a new article. You can also follow me on <a href="https://twitter.com/neilxm">Twitter</a> to stay updated.
+            </p>
+            <form data-members-form="subscribe">
+                <div style="display: flex; flex-wrap: wrap;">
+                <input data-members-email type="email" style="width: 50%; min-width: 300px;" required="true" placeholder="Enter your email..."/>
+                <button type="submit" style="width: 50%; min-width: 300px; border-radius:0px ">Subscribe</button>
+                </div>
+                <div style="display: flex; justify-content: center; padding-top:30px;">
+                    <div style="max-width: 600px; text-align: center;">
+                        <span class="spinning-loader">{{> "icons/loader"}}</span>
+                        <div class="message-success" style="padding: 15px; background-color: rgba(160, 255, 184, 0.637); border-radius: 10px;">
+                            <strong>Great!</strong> Check your inbox and click the link to confirm your subscription.
+                        </div>
+                        <div class="message-error">
+                            Please enter a valid email address!
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </div>
+
+</main>
+
+
+
