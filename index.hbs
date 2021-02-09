@@ -4,7 +4,8 @@
 		<div class="box blog-box">
 			<h1 class="blog-name">{{@site.title}}</h1>
 			{{#if @site.description}}
-			<span class="blog-description">{{@site.description}}</span>
+			<span class="blog-description" id="blogdesc">{{@site.description}}</span>
+			{{!-- <span class="blog-description" id="blogdesc">.</span> --}}
 			{{/if}}
 		</div>
 		{{#if @site.cover_image}}
@@ -22,11 +23,8 @@
 </header>
 
 <div id="index" class="container">
-
 	<main class="content" role="main">
-
 		{{> "loop"}}
-
 	</main>
-
 </div>
+

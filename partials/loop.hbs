@@ -7,11 +7,26 @@
 <article class="{{post_class}}">
 	<div class="inner">
 		<div class="box post-box">
-			<span class="post-meta">
-				<time datetime="{{date format='DD-MM-YYYY'}}">{{date format="MMM D, YYYY"}}</time>
-			</span>
-			<h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
-			<p class="post-excerpt">{{excerpt}}&hellip;</p>
+			<div style="display: flex;">
+				<div class="imageinloop" style="max-width: 180px; max-height: 130px; min-width: 180px; min-height: 130px; padding-right:20px;">
+					
+					{{#if feature_image}}	
+					<img style="width: 100%; height: 100%; object-fit: cover; border-radius: 5px;" src="{{img_url feature_image}}" alt="{{title}}" />
+					{{else}}
+					<img style="width: 100%; height: 100%; object-fit: cover; border-radius: 5px;" src="{{asset "images/placeholder.png"}}" alt="{{title}}" />
+					{{/if}}
+
+				</div>
+
+				<div>
+					<span class="post-meta">
+						<time datetime="{{date format='DD-MM-YYYY'}}">{{date format="MMM D, YYYY"}}</time>
+					</span>
+					<h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
+					<p class="post-excerpt">{{excerpt}}&hellip;</p>
+				</div>
+			</div>
+
 		</div>
 	</div>
 </article>
